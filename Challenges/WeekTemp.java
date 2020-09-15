@@ -20,7 +20,7 @@ public static void main(String[] args) {
     System.out.print(" Sunday:");
     int day7 = sc.nextInt();
 
-    float average = (day1 + day2 + day3 + day4 + day5 + day6 + day7)/7;
+    double average = (day1 + day2 + day3 + day4 + day5 + day6 + day7)/7.0;
 
     
 

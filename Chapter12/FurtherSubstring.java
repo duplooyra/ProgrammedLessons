@@ -19,5 +19,7 @@ public class FurtherSubstring
 
     System.out.println("\nOriginal String:\n" + str + "\n\nSubstring:\n" + sub);
 
+    sc.close();
+
   }
 }

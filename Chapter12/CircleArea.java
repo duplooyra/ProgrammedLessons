@@ -9,6 +9,8 @@ public static void main(String[] args) {
 
     System.out.println("The radius is: " + r + " The area is: " + area);
 
+    sc.close();
+
 
 
 

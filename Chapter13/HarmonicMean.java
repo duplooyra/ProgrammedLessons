@@ -11,7 +11,7 @@ public class HarmonicMean{
         int y = sc.nextInt();
         
         double hm = 2 / ((1.0/x) + (1.0/y));
-        float am =  Math.round(hm);
+        double am = (x + y)/2;
 
         System.out.println("Arithmetic mean: " + am);
         System.out.println("Harmonic mean: " + hm);

@@ -6,20 +6,53 @@ public class Color{
     int r = randomGenerator.nextInt(256);;
     int g = randomGenerator.nextInt(256);;
     int b = randomGenerator.nextInt(256);;
+    int x = 0;
+    
 
-
-    public void InputColor(int r,int g,int b){
+    // Sets color to inputed values
+    public void setColor(int r,int g,int b){
+        if (r > 255){
+            r = 255;
+        }
+        if (g > 255){
+            r = 255;
+        }
+        if (b > 255){
+            r = 255;
+        }
+        if (r < 0){
+            r = 0;
+        }
+        if (g < 0){
+            r = 0;
+        }
+        if (b < 0){
+            r = 0;
+        }
         this.r = r;
         this.g = g;
         this.b = b;
-        
     }
+
     // Generates a new random color
-    public String GenerateColor(){
+    public void genColor(){
         r = randomGenerator.nextInt(256);
         g = randomGenerator.nextInt(256);
         b = randomGenerator.nextInt(256);
-        return (r + "," + g + "," + b);
     }
+
+    // Returns the color values
+    public String getColor(){
+        return (r + ", " + g + ", "+ b);
+    }
+
+    // Adjusts the brightness of the color
+    public void setBrightness(double percent){
+        percent = percent / 100;
+        r = (int) (r*percent);
+        g = (int) (g*percent);
+        b = (int) (b*percent);
+    }
+    
 
 }

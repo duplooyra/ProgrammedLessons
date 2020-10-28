@@ -46,7 +46,7 @@ public class Color{
 
     // Returns the color values
     public void getColor(){
-        System.out.println(r + ", " + g + ", "+ b);
+        System.out.println("[" + r + ", " + g + ", "+ b + "]");
     }
 
     // Adjusts the brightness of the color

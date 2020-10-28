@@ -3,14 +3,16 @@ public class ColorTester{
 
         // Check for default random color
         Color test = new Color();
+
+        test.generateRandom();
         System.out.println(test.r + ", " + test.g + ", " + test.b);
 
         // Check for inputted color
-        test.setColor(-30, 200, 100);
+        test.createColor(-30, 2000, 100);
         System.out.println(test.r + ", " + test.g + ", " + test.b);
 
         // Check for new random color
-        test.genColor();
+        test.randomize();
         System.out.println(test.r + ", " + test.g + ", " + test.b);
 
         // Retrieve and display current color

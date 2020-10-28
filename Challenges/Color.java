@@ -3,42 +3,28 @@ import java.util.Random;
 public class Color{
     // Generate default random color
     Random randomGenerator = new Random();
-    int r = randomGenerator.nextInt(256);;
-    int g = randomGenerator.nextInt(256);;
-    int b = randomGenerator.nextInt(256);;
-    int x = 0;
+    int r;
+    int g;
+    int b;
 
-    public void clampValues(){
-        if (r > 255){
-            r = 255;
+    // Generate a new color with random values for r, g, and b
+    public void generateRandom(){
+        r = randomGenerator.nextInt(256);
+        g = randomGenerator.nextInt(256);
+        b = randomGenerator.nextInt(256);
         }
-        if (g > 255){
-            r = 255;
-        }
-        if (b > 255){
-            r = 255;
-        }
-        if (r < 0){
-            r = 0;
-        }
-        if (g < 0){
-            r = 0;
-        }
-        if (b < 0){
-            r = 0;
-        }
-    }
+    
 
-    // Sets color to inputed values
-    public void setColor(int r,int g,int b){
-        clampValues();
+    // Creates a new color with set values for r, g, and b
+    public void createColor(int r,int g,int b){
         this.r = r;
         this.g = g;
         this.b = b;
+        clampValues();
     }
 
-    // Generates a new random color
-    public void genColor(){
+    // Creates a new random color
+    public void randomize(){
         r = randomGenerator.nextInt(256);
         g = randomGenerator.nextInt(256);
         b = randomGenerator.nextInt(256);
@@ -55,6 +41,29 @@ public class Color{
         r = (int) (r*percent);
         g = (int) (g*percent);
         b = (int) (b*percent);
+        clampValues();
+    }
+
+    // Clamps illegal values
+    private void clampValues(){
+        if (r > 255){
+            r = 255;
+        }
+        if (g > 255){
+            g = 255;
+        }
+        if (b > 255){
+            b = 255;
+        }
+        if (r < 0){
+            r = 0;
+        }
+        if (g < 0){
+            g = 0;
+        }
+        if (b < 0){
+            b = 0;
+        }
     }
     
 

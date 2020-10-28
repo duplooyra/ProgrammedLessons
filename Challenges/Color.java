@@ -7,10 +7,8 @@ public class Color{
     int g = randomGenerator.nextInt(256);;
     int b = randomGenerator.nextInt(256);;
     int x = 0;
-    
 
-    // Sets color to inputed values
-    public void setColor(int r,int g,int b){
+    public void clampValues(int r, int g, int b){
         if (r > 255){
             r = 255;
         }
@@ -29,6 +27,11 @@ public class Color{
         if (b < 0){
             r = 0;
         }
+    }
+
+    // Sets color to inputed values
+    public void setColor(int r,int g,int b){
+        clampValues(r, g ,b);
         this.r = r;
         this.g = g;
         this.b = b;
@@ -42,12 +45,12 @@ public class Color{
     }
 
     // Returns the color values
-    public String getColor(){
-        return (r + ", " + g + ", "+ b);
+    public void getColor(){
+        System.out.println(r + ", " + g + ", "+ b);
     }
 
     // Adjusts the brightness of the color
-    public void setBrightness(double percent){
+    public void changeBrightness(double percent){
         percent = percent / 100;
         r = (int) (r*percent);
         g = (int) (g*percent);

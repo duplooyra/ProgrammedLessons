@@ -8,7 +8,7 @@ public class Color{
     int b = randomGenerator.nextInt(256);;
     int x = 0;
 
-    public void clampValues(int r, int g, int b){
+    public void clampValues(){
         if (r > 255){
             r = 255;
         }
@@ -31,7 +31,7 @@ public class Color{
 
     // Sets color to inputed values
     public void setColor(int r,int g,int b){
-        clampValues(r, g ,b);
+        clampValues();
         this.r = r;
         this.g = g;
         this.b = b;
@@ -51,7 +51,7 @@ public class Color{
 
     // Adjusts the brightness of the color
     public void changeBrightness(double percent){
-        percent = percent / 100;
+        percent = percent / 100.0;
         r = (int) (r*percent);
         g = (int) (g*percent);
         b = (int) (b*percent);

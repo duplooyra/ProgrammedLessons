@@ -30,4 +30,25 @@ public class ArrayPractice{
             data[data.length - i -1] = x;
         }
     }
+
+    public static int search(int[] data, int number){
+        for (int i = 0; i < data.length; i++){
+            if(data[i] == number){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void sort(int[] data){
+        for (int i = 0; i < data.length; i++){
+            for (int x = i + 1; x < data.length; x++){
+                if (data[i] > data[x]){
+                    int y = data[i];
+                    data[i] = data[x];
+                    data[x] = y;
+                }
+            }
+        }
+    }
 }

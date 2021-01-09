@@ -13,5 +13,10 @@ public class ArrayTester{
 
         ArrayPractice.reverse(numbers);
         System.out.println(Arrays.toString(numbers) + " REVERSED ARRAY");
+
+        System.out.println(ArrayPractice.search(numbers, 8) + " SEARCHED ARRAY FOR 8");
+
+        ArrayPractice.sort(numbers);
+        System.out.println(Arrays.toString(numbers) + " SORTED ARRAY");
     }
 }

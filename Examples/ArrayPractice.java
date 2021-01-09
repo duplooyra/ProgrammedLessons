@@ -44,9 +44,9 @@ public class ArrayPractice{
         for (int i = 0; i < data.length; i++){
             for (int x = i + 1; x < data.length; x++){
                 if (data[i] > data[x]){
-                    int y = data[i];
+                    int temporary = data[i];
                     data[i] = data[x];
-                    data[x] = y;
+                    data[x] = temporary;
                 }
             }
         }

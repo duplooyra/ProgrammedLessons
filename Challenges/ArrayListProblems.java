@@ -8,7 +8,9 @@ public class ArrayListProblems {
         System.out.println("1: " + commonFruitList());
         System.out.println("2: " + animalRemoveDuplicates());
         System.out.println("3: " + addInteger());  
-        System.out.println("4: " + reverseInteger());      
+        System.out.println("4: " + reverseInteger());
+        System.out.println("5: " + Points.createPoints());  
+        System.out.println("6: " + Points.createMidpoints());
         
 
     }

@@ -55,5 +55,4 @@ public class ComparisonSorts{
       }
       return array1;
    }
-
 }

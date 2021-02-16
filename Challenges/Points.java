@@ -10,6 +10,10 @@ public class Points {
         this.y = y;
     }
 
+    public double originDistance(Points point){
+        return (Math.abs(0 - point.getX(point)) + Math.abs(0 - point.getY(point)));
+    }
+
     public String toString(){
         return ("(" + x + ", " + y + ")");
     }
@@ -55,6 +59,20 @@ public class Points {
 
             pointList.add(i + 1, midp);
             i++;
+        }
+        return pointList;
+    }
+
+    public static ArrayList<Points> proximitySort(){
+        ArrayList<Points> pointList = createPoints();
+        for (int i = 1; i < pointList.size(); i++){
+            Points t = pointList.get(i);
+            int x = i - 1;
+            while (x >= 0 && pointList.get(x).originDistance(pointList.get(x)) > t.originDistance(t)){
+                pointList.set(x + 1, pointList.get(x));
+                x -= 1;
+            }
+            pointList.set(x + 1,t);
         }
         return pointList;
     }

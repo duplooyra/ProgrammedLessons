@@ -11,6 +11,7 @@ public class ArrayListProblems {
         System.out.println("4: " + reverseInteger());
         System.out.println("5: " + Points.createPoints());  
         System.out.println("6: " + Points.createMidpoints());
+        System.out.println("7: " + Points.proximitySort());
         
 
     }
